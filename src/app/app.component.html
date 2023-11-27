@@ -1,0 +1,810 @@
+<body  style="direction:rtl">
+  <app-header></app-header>
+  <div>
+    <button class="btn-router" routerLink="user/list">user-list</button>
+    <button class="btn-router" routerLink="user/app">user-app</button>
+    <button class="btn-router" routerLink="product/list">product-list</button>
+    <button class="btn-router" routerLink="product/app">product-app</button>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</body>
+
+
+
+
+
+<!--تسک کلاس دوتا ایتم ها-->
+<!-- <body  class="container" >
+
+  <section class="bg-dark container-fluid">
+    <h1 class="text-white text-center">{{continer1[0].h1}}</h1>
+    <div class="d-flex flex-row row justify-content-around " *ngFor="let cont of continer1">
+      <div class="d-box-mac col-12 col-sm-12 col-md-12 col-lg-6 " *ngFor="let pro of cont.profile ">
+        <p class="text-white">{{pro.text1}}</p>
+        <p class="text-white-50">{{pro.p1}}</p>
+        <hr class="hr">
+        <div class="d-flex flex-column align-items-center justify-content-center" *ngFor="let image of continer1[0].box1">
+          <div class="d-flex">
+            <img [src]="image.imgs1[0].src1" alt="macbookImg" class="imgMac">
+            <img [src]="image.imgs1[0].src3" alt="macbookImg" class="imgMac">
+          </div>
+          <div class="d-flex mt-2">
+            <img [src]="image.imgs1[0].src4" alt="macbookImg" class="imgMac-png">
+          </div>
+        </div>
+        <div class="d-block my-3 mx-3" *ngFor="let text of continer1[0].box1">
+          <h5 class="text-white-50">{{text.h1.p1}}</h5>
+          <h5 class="text-white-50 div-h5">{{text.h1.p2}}</h5>
+        </div>
+      </div>
+      <div class="d-box-mac col-12 col-sm-12 col-md-12 col-lg-6 " *ngFor="let t of continer1[0].profile">
+        <p class="text-white">{{t.text1}}</p>
+        <p class="text-white-50">{{t.p2}}</p>
+        <hr style="width: 200px; color: darkgray;">
+        <div *ngFor="let image of continer1[0].box1" class="d-flex flex-column align-items-center justify-content-center">
+          <div class="d-flex">
+            <img [src]="image.imgs1[0].src2" alt="macbookImg" class="imgMac">
+            <img [src]="image.imgs1[0].src3" alt="macbookImg" class="imgMac">
+          </div>
+          <div class="d-flex mt-2">
+            <img [src]="image.imgs1[0].src4" alt="macbookImg" class="imgMac-png">
+            <img [src]="image.imgs1[0].src4" alt="macbookImg" class="imgMac-png">
+          </div>
+        </div>
+        <div *ngFor="let text of continer1[0].box1" class="d-block my-3 mx-3">
+          <h5 class="text-white-50">{{text.h1.p3}}</h5>
+          <h5 class="text-white-50 div-h5">{{text.h1.p4}}</h5>
+        </div>
+      </div>
+      <div class="d-box-mac col-12 col-sm-12 col-md-12 col-lg-6 " *ngFor="let t of continer1[0].profile">
+        <p class="text-white">{{t.text2}}</p>
+        <p class="text-white-50">{{t.p2}}</p>
+        <hr class="hr">
+        <div class="d-flex flex-column align-items-center justify-content-center" *ngFor="let image of continer1[0].box1">
+          <div class="d-flex">
+            <img [src]="image.imgs1[0].src2" alt="macbookImg" class="imgMac">
+            <img [src]="image.imgs1[0].src3" alt="macbookImg" class="imgMac">
+          </div>
+          <div class="d-flex mt-2">
+            <img [src]="image.imgs1[0].src4" alt="macbookImg" class="imgMac-png">
+            <img [src]="image.imgs1[0].src4" alt="macbookImg" class="imgMac-png">
+          </div>
+        </div>
+        <div class="d-block my-3 mx-3" *ngFor="let text of continer1[0].box1">
+          <h5 class="text-white-50">{{text.h1.p3}}</h5>
+          <h5 class="text-white-50 div-h5">{{text.h1.p2}}</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section class="bg-light">
+    <div class="section-div" *ngFor="let texts of continer2">
+      <h2 class="div-h2">{{texts.text}}</h2>
+      <a href="#" style="text-decoration:none; ">{{texts.link}}</a>
+    </div>
+    <div class="d-flex row justify-content-around align-items-stretch">
+
+      <div class="col-12 col-sm-12 col-md-4 my-4">
+        <div *ngFor="let boxItem of continer2[0].obj">
+          <img [src]="boxItem.img1"  alt="iMac image" width="200px" > 
+          <div class="colors d-flex" *ngFor="let colors of continer2[0].obj">
+            <div class="boxs"  [style.background-color]="colors.colors1[0].hex + ' !important'">'</div>
+            <div class="boxs"  [style.background-color]="colors.colors1[1].hex + ' !important'">'</div>
+            <div class="boxs"  [style.background-color]="colors.colors1[3].hex + ' !important'">'</div>
+            <div class="boxs"  [style.background-color]="colors.colors1[4].hex + ' !important'">'</div>
+            <div class="boxs"  [style.background-color]="colors.colors1[5].hex + ' !important'">'</div>
+            <div class="boxs"  [style.background-color]="colors.colors1[6].hex + ' !important'">'</div>
+            <div class="boxs"  [style.background-color]="colors.colors1[7].hex + ' !important'">'</div>
+          </div>
+        </div>
+        <div class="my-3">
+          <p class="text-danger mb-0">New</p>
+          <h3>{{continer2[0].p1}}</h3>
+        </div>
+      
+        <div *ngFor="let p of continer2[0].texts1">
+          <h6 class="text-body-tertiary">{{p.h5}}</h6>
+        </div>
+        <button type="button" class="btn-buy">Buy</button>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-4 my-4">
+        <div *ngFor="let boxItem of continer2[0].obj">
+          <img [src]="boxItem.img2"  alt="iMac image" width="200px" > 
+          <div class="colors d-flex" *ngFor="let colors of continer2[0].obj">
+            <div class="boxs"  [style.background-color]="colors.colors2[0].hex + ' !important'">'</div>
+          </div>
+        </div>
+        <div class="my-3">
+          <h3>{{continer2[0].p2}}</h3>
+        </div>
+      
+        <div *ngFor="let p of continer2[0].texts2">
+          <h6 class="text-body-tertiary">{{p.h5}}</h6>
+        </div>
+        <button type="button" class="btn-buy">Buy</button>
+        <a href="#" style="text-decoration: none;">Learn more > </a>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-4 my-4">
+        <div *ngFor="let boxItem of continer2[0].obj">
+          <img [src]="boxItem.img3"  alt="iMac image" width="200px" > 
+          <div class="colors d-flex" *ngFor="let colors of continer2[0].obj">
+            <div class="boxs"  [style.background-color]="colors.colors2[0].hex + ' !important'">'</div>
+          </div>
+        </div>
+        <div class="my-3">
+          <h3>{{continer2[0].p3}}</h3>
+        </div>
+      
+        <div *ngFor="let p of continer2[0].texts3">
+          <h6 class="text-body-tertiary">{{p.h5}}</h6>
+        </div>
+        <button type="button" class="btn-buy">Buy</button>
+        <a href="#" style="text-decoration: none;">Learn more > </a>
+      </div>
+    </div>
+  </section>
+
+</body> -->
+
+
+<!-- <body class="d-flex" style="direction: rtl;">
+  <header></header>
+
+  <aside *ngFor="let items of sections">
+
+    <div class="d-flex justify-content-between" *ngFor="let item of items.filters" >
+      <p style="display: inline; font-weight: bolder; font-size: larger;">{{item.p}}</p>
+      <a href="#" style="display: inline; text-decoration: none;">{{item.a}}</a>
+    </div>
+
+    <div class="d-aside">
+
+      <div class="form-check form-switch d-flex justify-content-between" *ngFor="let item of items.sendTodey" >
+        <label class="form-check-label" [for]="item.label"> {{item.label}}
+          <img [src]="item.img" alt="svg" width="18px">
+        </label>
+        <input class="form-check-input" type="checkbox" role="switch" [id]="item.label">
+      </div>
+      <hr>
+      <div class="form-check form-switch d-flex justify-content-between"  *ngFor="let item of items.sendSeller">
+        <label class="form-check-label" [for]="item.label"> {{item.label}}
+          <img [src]="item.img" alt="svg" width="18px">
+        </label>
+        <input class="form-check-input" type="checkbox" role="switch" [id]="item.label">
+      </div>
+      <hr>
+      <div class="section">
+        <select class="form-select form-select-sm" aria-label="Small select example" style="border-style: none;">
+          <option selected>محدوده قیمت</option>
+          <option value="1">one</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      <hr>
+      <div class="form-check form-switch d-flex justify-content-between" *ngFor="let item of items.sendTodey">
+        <label class="form-check-label" [for]="item.label"> {{item.label}}</label>
+        <input class="form-check-input" type="checkbox" role="switch" [id]="item.label">
+      </div>
+      <hr>
+      <div class="form-check form-switch d-flex justify-content-between">
+        <label class="form-check-label" [for]="items.availableDigi"> {{items.availableDigi}}</label>
+        <input class="form-check-input" type="checkbox" role="switch" [id]="items.availableDigi">
+      </div>
+      <hr>
+      <div class="section">
+        <select class="form-select form-select-sm" aria-label="Small select example" style="border-style: none;">
+          <option>محدوده قیمت</option>
+          <option value="1">one</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+      
+    </div>
+  </aside>
+
+  <main class="mx-3" *ngFor="let itemss of sections">
+    <div class="d-flex items-center  justify-content-end border-complete-b-200 py-3" style="display: inline-flex;" *ngFor="let item of itemss.nav">
+      <div class="d-flex inline-flex items-center text-neutral-700 text-body2-strong whitespace-nowrap ml-2">
+        <img src="../assets/icon/sort-amount-down-alt-solid.svg" alt="" style="width: 18px; margin-left: 5px;">
+        <p>{{item.text}}</p>
+      </div>
+      <div *ngFor="let link of item.a" style="margin-right: 20px;">
+        <a href="#" style="text-decoration: none; color: black;">{{link.p}}</a>
+      </div>
+    </div>
+    
+    <div class="d-flex flex-row border border-body-tertiary" style="width: 340px;" *ngFor="let item of itemss.colorsDiv">
+      <a href="#" class="a-carts">
+
+        <div style="margin-bottom: 4px;">
+          <img [src]="item.img1" alt="IncredibleOffer.svg" class="d-m-img1">
+        </div>
+
+        <img [src]="item.img2" alt="phon-img" width="240px">
+
+        <div class="d-inline flex items-center justify-center gap-2"  *ngFor="let color of item.span" >
+          <div  *ngFor="let c of color.hex">
+            <div class=".d-m-span flex flex-column" [style.background-color]="color.hex + '!important'">.</div>
+            <div class=".d-m-span flex flex-column" [style.background-color]="color.hex + '!important'">.</div>
+            <div class=".d-m-span flex flex-column" [style.background-color]="color.hex + '!important'">.</div>
+          </div>
+        </div>
+
+        <div  class="d-flex justify-start gap-2 px-2 rounded-pill bg-light m-0 p-0 " style="width: 150px;">
+          <div >
+            <img [src]="itemss.sendLabel.img" alt="car-digi" class="img-car-digi ">
+          </div>
+          <div>
+            <p class="text-secondary d-inline" style="font-weight: 700; line-height: 2.17; font-size: 12px;">{{itemss.sendLabel.p}}</p>
+          </div>
+        </div>
+
+        <p class="text-dark">{{itemss.textBox}}</p>
+
+
+        <div class="d-flex justify-between" *ngFor="let items of itemss.sendTodey">
+          <div >
+            <img *ngFor="let item of items.img" [src]="item" alt="" width="18px">
+            <span *ngFor="let item of items.label" style="font-size: 11px; color: #62666d;">{{item}}</span>
+          </div>
+          <div *ngFor="it of itemss.scor">
+              <span *ngFor="a of it.span">{{a.span}}</span>
+              <img src="" alt="">
+          </div> 
+        </div>
+        
+        
+      </a>
+    </div>
+  </main>
+</body> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class=" container">
+  <div class="div-header row d-flex position-fixed">
+    <img src="./assets/img/photo_1_2023-10-24_22-13-54.jpg"
+            alt="logo-digi" 
+            style="width: 125px; top: 10px;right: 10px; position: fixed;">
+    <button id="btn-hamdergher"
+            style="width:50px; height:50px; border-style:none; border-radius:10px;position: fixed; left: 10px; top: 13px;">☰
+    </button>
+    <nav id="nav"
+          style="position: fixed; background-color: rgb(245, 245, 245); width: 500px; left:2px; top: 67px; ">
+      <ul class="d-flex" style="list-style: none; margin-top: 17px;">
+
+        <div class=" d-flex align-items-center input-search">
+          <span class="material-symbols-outlined ">search</span>
+          <input type="search" placeholder="جستجو..." aria-label="Search">
+        </div>
+
+        <li style="margin-right: 60px; margin-top: 9px;">
+          <button style="border-style: none; background-color: white;">
+              <span class="material-symbols-outlined">person</span>
+          </button>
+        </li>
+
+        <li style="margin-right: 8px; margin-top: 9px;">
+          <button style="border-style: none; background-color: white;">
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    
+  </div>
+</div> -->
+
+
+<!-- <main>
+  <div class="container-fluid"> -->
+    <!--صفحه اصلی-->
+    <!-- <div class="row d-flex justify-content-between p-0 m-0"> -->
+      <!--سمت گوشی-->
+      <!-- <div class="imgs col-xl-4 col-lg-4 col-md-12 col-sm-12"> -->
+
+        <!-- <div class="row"> -->
+          <!--icons-->
+          <!-- <div class="div-icon col-md-2 " >
+            <span class="text-danger fw-bold">فروش ویژه</span>
+            <div class="">
+              <span class="material-symbols-outlined py-2">favorite</span>
+              <span class="material-symbols-outlined py-2">share</span>
+              <span class="material-symbols-outlined py-2">notifications</span>
+              <span class="material-symbols-outlined py-2">monitoring</span>
+              <span class="material-symbols-outlined py-2">compare</span>
+              <span class="material-symbols-outlined py-2">library_add_check</span>
+            </div>
+          </div> -->
+          <!--imgs-->
+          <!-- <div class=" col-md-10 p-0 m-0 bg-light"> -->
+            <!--img 1-->
+            <!-- <div class="img-1"> -->
+              <!-- <img 
+                  src="https://dkstatics-public.digikala.com/digikala-products/7d54f70cbc1277b205b5263963865efe05045373_1656411594.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90" 
+                  alt="mobile pic"
+                  style="width: 345px;">
+            </div> -->
+            <!--img 3-->
+            <!-- <div class="img-3 d-flex justify-content-center">
+                <div class="col-3">
+                  <img 
+                      src="https://dkstatics-public.digikala.com/digikala-products/96c6c228b3a0d5e9c99ce963bcbcfee7c33b8c81_1646215241.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90" 
+                      alt="mobile"
+                      style="width: 70px;">
+                </div>
+                <div class="col-3">
+                  <img 
+                      src="https://dkstatics-public.digikala.com/digikala-products/a2a4768cf9a8b74a580cb9f5de8c3d0da750d4a1_1663141431.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90" 
+                      alt="mobile"
+                      style="width: 70px;">
+                </div>
+                <div class="col-3">
+                  <img 
+                      src="https://dkstatics-public.digikala.com/digikala-products/30551aef20d3c6c8c55569694178c4db805b9aea_1646215241.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90" 
+                      alt="mobile"
+                      style="width: 70px;">
+                </div>
+            </div>
+          </div>   
+        </div>
+
+      </div> -->
+
+      <!--سمت خدمات-->
+      <!-- <div class=" col-xl-8 col-lg-8 col-md-12 col-sm-12 px-5"> -->
+        <!-- <div class="row"> -->
+          <!--text-->
+          <!-- <div class="text col-12">
+              <p class="fw-bold text-info"
+                 style="font-size:16px; ">جی پلاس/گوشی موبایل جی پلاس</p>
+              <p class="fw-bold" 
+                 style="font-size: 20px;">گوشی موبایل جی پلاس مدل P10 2022 GMC-635M دو سیم کارت ظرفیت 32 گیگابایت و رم 3 گیگابایت
+              </p>
+          </div> -->
+          <!--box-right-->
+          <!-- <div class="col-lg-6 col-sm-12 ">
+              <p class="text-muted"
+                style="font-size: 12px;">G PLUS P10 2022 GMC-635M Dual SIM 32GB And 3GB RAM Mobile Phone</p>
+              <div class="row d-flex justify-content-start">
+                <div class="col-3">
+                  <a href="#"  class="d-flex" style="text-decoration: none;">
+                    <img src="./assets/icon/Paomedia-Small-N-Flat-Star.512.png" 
+                        alt="star" 
+                        style="width: 12px; height: 12px; margin-left: 6px;">
+                    <p style="color: black; font-size: 15px;">۴<span class="text-muted">(۵۶۸)</span></p></a>
+                </div>
+                <div class="col-3">
+                  <a href="" class="text-info" style="text-decoration: none;">۶۰۰ دیدگاه</a>
+                </div>
+                <div class="col-3">
+                  <a href="" class="text-info" style="text-decoration: none;">۶۰۰پرسش</a>
+                </div>
+              </div> -->
+              <!--لایک-->
+              <!-- <div class="d-flex row justify-content-start">
+                <img src="./assets/icon/Praveen-Minimal-Outline-Like-2.512.png"
+                    alt="like icon"
+                    style="width: 40px; height:19px;">
+                    <p class="text-muted" 
+                        style="font-size: 12px; width: 275px;">۷۲% (۳۶۰نفر)از خریداران این کالارا پیشنهاد داده اند.</p>
+              </div> -->
+              <!--رنگ گوشی-->
+              <!-- <div>
+                <p class="fw-bold">رنگ : ابی</p>
+                <img src="./assets/icon/Custom-Icon-Design-Flatastic-6-Circle.512.png"
+                    alt="color mobile"
+                    style="width: 37px;">
+              </div> -->
+              <!--بیمه-->
+              <!-- <div class="pt-4">
+                <p class="fw-bold">بیمه :</p>
+                <div class="d-flex "
+                    style="border: 1px solid darkgray; border-radius: 8px; padding: 8px;" >
+                  <input type="checkbox" name="" id="" style="width: 18px; margin-right: 20px;">
+                  <div style=" border-left: 2px solid darkgray; height: 80px; margin-right: 28px;"></div>
+                  <div style="margin-right: 16px;">
+                    <p>بیمه تجهیزات دیجیتال - بیمه پارسیان</p>
+                    <p>
+                      <span 
+                          style="background-color:rgba(255, 31, 31, 0.733); padding: 6px; border-radius: 16px; font-size: 10px;">۲۰%</span>
+                      <span style=" text-decoration:line-through;">۸,۰۰۰,۰۰۰</span>
+                      <span class="fw-bold">۶,۴۵۰,۰۰۰تومان</span>
+                    </p>
+                  </div>
+                </div>
+              </div> -->
+              <!--ویژگی ها -->
+              <!-- <div class="pt-5">
+                <p class="fw-bold">ویزگی ها</p>
+                <ul class="text-muted">
+                  <li >نسخه سیستم عامل : <span style="color: black; font-weight: bold;">Android 11</span></li>
+                  <li >رزولوشن عکس :<span style="color: black; font-weight: bold;">13 مگاپیکسل</span></li>
+                  <li >اندازه :<span style="color: black; font-weight: bold;">6.09</span></li>
+                  <li >اقلام همراه :<span style="color: black; font-weight: bold;">دفترچه‌ راهنما، شارژر، محافظ صفحه نمایش، هندزفری</span></li>
+                </ul>
+              </div> -->
+              <!--پیغام -->
+              <!-- <div class="d-flex my-4" style="text-align : justify;">
+                <img src="./assets/icon/Iconoir-Team-Iconoir-Chat-bubble-warning.512.png"
+                    alt="warning icon"
+                    style="width: 30px; height: 30px; padding-left: 12px;">
+                    <p>امکان برگشت کالا در گروه موبایل با دلیل "انصراف از خرید" تنها در صورتی مورد قبول است که پلمب کالا باز نشده باشد. تمام گوشی‌های دیجی‌کالا ضمانت رجیستری دارند. در صورت وجود مشکل رجیستری، می‌توانید بعد از مهلت قانونی ۳۰ روزه، گوشی خریداری‌شده را مرجوع کنید.</p>
+              </div> -->
+              <!--ارسال رایگان-->
+              <!-- <div class="d-flex justify-content-between"
+                  style="border: 1px solid darkgray; border-radius: 10px;">
+                <p class="fw-bold py-3 m-0" style="padding-right: 1pc;">ارسال رایگان برای این کالا</p>
+                <img src="./assets/icon/Aha-Soft-Transport-Cow-wagon.256.png" 
+                    alt="car img"
+                    style="width: 70px; padding-left: 1pc;">
+              </div> -->
+              <!-- برا دیجی پلاس ارسال رایگان-->
+              <!-- <div class="mt-2"
+                  style="border: 1px solid darkgray; border-radius: 10px;">
+                <p class="fw-bold py-3 m-0" style="padding-right: 1pc; color:rgb(145, 51, 145);">ارسال رایگان سفارش‌ها برای اعضای دیجی‌پلاس</p>
+                <p class="" style="padding-right: 1pc;">ارسال فوری برای شهر تهران (رایگان)</p>
+                <div class="d-flex justify-content-between">
+                  <a href="#" style="padding-right: 1pc; text-decoration: none;">خرید اشتراک</a>
+                  <img src="./assets/icon/Aha-Soft-Transport-Cow-wagon.256.png" 
+                      alt="car img"
+                      style="width: 70px; padding-left: 1pc;">
+                </div>
+              </div>
+            </div> -->
+          <!--box-left-->
+          <!-- <div class="col-lg-6 col-sm-12 ">
+              <div class="cart p-3" style="border-radius: 10px; background-color: rgba(247, 247, 247, 0.685);"> -->
+                  <!--فروشنده -->
+                  <!-- <div class="d-flex justify-content-between">
+                    <p class="fw-bold">فروشنده</p>
+                    <p class="text-info">فروشنده دیگر</p>
+                  </div> -->
+                  <!--عکس و عملکرد دیجی کالا-->
+                  <!-- <div>
+                    <img src="./assets/img/photo_1_2023-10-24_22-13-54.jpg"
+                        alt="digi img"
+                        style="width: 70px;">
+                        <p class="pt-2">
+                          <span style="color: green;">۸۱%</span>رضایت کالا 
+                          <span>|</span>عملکرد 
+                          <span style="color: green;">عالی</span>
+                        </p>
+                  </div>
+                  <hr style="color: darkgray;"> -->
+                  <!--گارانتی-->
+                  <!-- <div class="d-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
+                      <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z"/>
+                      <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                    </svg>
+                    <p>گارانتی ۱۸ ماهه مدیا پردازش</p>
+                  </div>
+                  <hr style="color: darkgray;"> -->
+                  <!--موجودی انبار-->
+                  <!-- <div>
+                    <div class="d-flex">
+                      <img src="./assets/icon/Custom-Icon-Design-Flatastic-4-Inventory-maintenance.512.png"
+                        alt="mojodi img"
+                        style="width: 20px; height: 20px;">
+                    <p class="fw-bold">موجود در انبار دیجی کالا</p>
+                    </div>
+                    <div class="d-flex">
+                      <img src="./assets/icon/Martz90-Hex-Car.512.png"
+                          alt=""
+                          style="width: 15px; height: 15px;">
+                      <p>ارسال دیجی‌کالا</p>
+                    </div>
+                    <div class="d-flex">
+                      <img src="./assets/icon/Pictogrammers-Material-Cube-send.512.png"
+                          alt=""
+                          style="width: 15px; height: 15px;">
+                      <p>ارسال امروز (فعلا در شهر تهران و کرج)</p>
+                    </div>
+                  </div>
+                  <hr style="color: darkgray;"> -->
+                  <!--امتیاز-->
+                  <!-- <div class="d-flex">
+                    <img src="./assets/icon/Iconka-Business-Finance-Golden-bars.512.png"
+                        alt=""
+                        style="width: 20px; height: 20px;">
+                        <p>۱۵۰ امتیاز دیجی‌کلاب</p>
+                  </div>
+                  <hr style="color: darkgray;"> -->
+                    <!--قیمت ها-->
+                  <!-- <div style="direction: ltr;">
+                    <span style="background-color:rgba(255, 31, 31, 0.733);padding: 6px; border-radius: 17px;">۴٪</span>
+                    <span style="text-decoration: none; color: darkgray;">۲,۹۵۹,۰۰۰</span><br>
+                    <span style="font-weight: bold;">۲,۸۳۵,۰۰۰تومان</span>
+                  </div> -->
+                  <!--دکمه ارسال-->
+                  <!-- <div class="d-flex justify-content-center my-2">
+                    <button type="submit" 
+                            style="background-color:rgba(255, 31, 31, 0.733);padding: 11px 10px; width: 360px; border-style:none; border-radius: 10px;">افزودن به سبدخرید
+                    </button>
+                  </div>
+              </div> -->
+            <!--فرایند قیمت گذاری-->
+            <!-- <div class="d-flex mt-3 p-3" style="border: 1px solid darkgray; border-radius: 10px;">
+              <a href="#" style="text-decoration: none; color:black;">
+                <img src="./assets/icon/Aniket-Suvarna-Box-Regular-Bx-error-circle.512.png" 
+                     alt="error icon"
+                    style="width:20px; height: 20px;">
+                    فرایند قیمت گذاری و نظارت برقیمت
+              </a>
+            </div> -->
+            <!--لینک قیمت بهتر-->
+            <!-- <div class="d-flex justify-content-end text-muted">
+              <a href="#" style="text-decoration: none; color: black; font-size: 15px;">قیمت بهتری سراغ دارید؟
+                <img src="./assets/icon/Microsoft-Fluentui-Emoji-Mono-Label.512.png"
+                     alt="label icon"
+                     style="width: 20px; height: 20px;">
+              </a>
+            </div>
+          </div> -->
+          <!--end box-left-->
+        <!-- </div>
+      </div>
+    </div> -->
+    <!--پایان صفحه اصلی-->
+  <!-- </div>
+</main> -->
+
+<!-- <footer>
+  <div class="d-flex row justify-content-between border shadow-lg my-5 p-5 ">
+      <div class="col-xl-2 col-lg-6 col-md-4 col-sm-6">
+        <a href="" style="color: darkgray; text-decoration: none;"><img src="./assets/icon/Pictogrammers-Material-Cube-send.512.png" alt=""style="width: 30px; height: 30px;">امکان تحویل اکسپرس</a>
+      </div>
+      <div class="col-xl-2 col-lg-6 col-md-4 col-sm-6">
+        <a href="" style="color: darkgray; text-decoration: none;"><img src="./assets/icon/Pictogrammers-Material-Cube-send.512.png" alt=""style="width: 30px; height: 30px;"> 24ساعته . 7 روز هفته </a>
+      </div>
+      <div class="col-xl-2 col-lg-6 col-md-4 col-sm-6">
+        <a href="" style="color: darkgray; text-decoration: none;"><img src="./assets/icon/Pictogrammers-Material-Cube-send.512.png" alt=""style="width: 30px; height: 30px;">امکان پرداخت درمحل</a>
+      </div>
+      <div class="col-xl-2 col-lg-6 col-md-4 col-sm-6">
+        <a href="" style="color: darkgray; text-decoration: none;"><img src="./assets/icon/Pictogrammers-Material-Cube-send.512.png" alt=""style="width: 30px; height: 30px;">7 روزامکان برگشت کالا</a>
+      </div>
+      <div class="col-xl-2 col-lg-6 col-md-4 col-sm-6">
+        <a href="" style="color: darkgray; text-decoration: none;"><img src="./assets/icon/Pictogrammers-Material-Cube-send.512.png" alt=""style="width: 30px; height: 30px;">ضمانت اصل بودن کالا</a>
+      </div>
+  </div>
+</footer>
+
+<section class="d-flex mx-2">
+  <div class="row  content">
+
+    <div class="box-phone col-lg-3 col-md-3 col-sm-6 col-md-3 col-sm-3 border rounded-bottom">
+      <p style="color:red; font-weight: bold;display: block;">فروش ویژه</p>
+      <img src="https://dkstatics-public.digikala.com/digikala-products/71e8dbf638d9d2d62228b4609fdcbd8db395fabb_1697877125.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
+           alt="phon-img"
+           style="width:280px; height:280px;">
+      <p class="text-send">
+        <span class="material-symbols-outlined" style="color: red;">local_shipping</span>
+        <span>ارسال رایگان</span>
+      </p>
+      <p class="text-phone">گوشی موبایل اپل مدل 13پرو تک سیم کارت ظرفیت 200مگابایت</p>
+      <p class="text-money">20,000,000تومان</p>
+    </div>
+
+    <div class="box-phone col-lg-3 col-md-3 col-sm-6 col-md-3 col-sm-3 border rounded-bottom">
+      <p style="color:red; font-weight: bold; display: block;">فروش ویژه</p>
+      <img src="https://dkstatics-public.digikala.com/digikala-products/71e8dbf638d9d2d62228b4609fdcbd8db395fabb_1697877125.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
+           alt="phon-img"
+           style="width:280px; height:280px;">
+      <p class="text-send">
+        <span class="material-symbols-outlined" style="color: red;">local_shipping</span>
+        <span>ارسال رایگان</span>
+      </p>
+      <p class="text-phone">گوشی موبایل اپل مدل 13پرو تک سیم کارت ظرفیت 200مگابایت</p>
+      <p class="text-money">20,000,000تومان</p>
+    </div>
+
+    <div class="box-phone col-lg-3 col-md-3 col-sm-6 col-md-3 col-sm-3 border rounded-bottom">
+      <p style="color:red; font-weight: bold; display: block;">فروش ویژه</p>
+      <img src="https://dkstatics-public.digikala.com/digikala-products/71e8dbf638d9d2d62228b4609fdcbd8db395fabb_1697877125.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
+           alt="phon-img"
+           style="width:280px; height:280px;">
+      <p class="text-send">
+        <span class="material-symbols-outlined">local_shipping</span>
+        <span>ارسال رایگان</span>
+      </p>
+      <p class="text-phone">گوشی موبایل اپل مدل 13پرو تک سیم کارت ظرفیت 200مگابایت</p>
+      <p class="text-money">20,000,000تومان</p>
+    </div>
+
+    <div class="box-phone col-lg-3 col-md-3 col-sm-6 col-md-3 col-sm-3 border rounded-bottom">
+      <p style="color:red; font-weight: bold; display: block;">فروش ویژه</p>
+      <img src="https://dkstatics-public.digikala.com/digikala-products/71e8dbf638d9d2d62228b4609fdcbd8db395fabb_1697877125.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
+           alt="phon-img"
+           style="width:280px; height:280px;">
+      <p class="text-send">
+        <span class="material-symbols-outlined" style="color: red;">local_shipping</span>
+        <span>ارسال رایگان</span>
+      </p>
+      <p class="text-phone">گوشی موبایل اپل مدل 13پرو تک سیم کارت ظرفیت 200مگابایت</p>
+      <p class="text-money">20,000,000تومان</p>
+    </div>
+
+    <div class="box-phone col-lg-3 col-md-3 col-sm-6 col-md-3 col-sm-3 border rounded-bottom">
+      <p style="color:red; font-weight: bold; display: block;">فروش ویژه</p>
+      <img src="https://dkstatics-public.digikala.com/digikala-products/71e8dbf638d9d2d62228b4609fdcbd8db395fabb_1697877125.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
+           alt="phon-img"
+           style="width:280px; height:280px;">
+      <p class="text-send">
+        <span class="material-symbols-outlined" style="color: red;">local_shipping</span>
+        <span>ارسال رایگان</span>
+      </p>
+      <p class="text-phone">گوشی موبایل اپل مدل 13پرو تک سیم کارت ظرفیت 200مگابایت</p>
+      <p class="text-money">20,000,000تومان</p>
+    </div>
+
+    <div class="box-phone col-lg-3 col-md-3 col-sm-6 col-md-3 col-sm-3 border rounded-bottom">
+      <p style="color:red; font-weight: bold; display: block;">فروش ویژه</p>
+      <img src="https://dkstatics-public.digikala.com/digikala-products/71e8dbf638d9d2d62228b4609fdcbd8db395fabb_1697877125.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
+           alt="phon-img"
+           style="width:280px; height:280px;">
+      <p class="text-send">
+        <span class="material-symbols-outlined" style="color: red;">local_shipping</span>
+        <span>ارسال رایگان</span>
+      </p>
+      <p class="text-phone">گوشی موبایل اپل مدل 13پرو تک سیم کارت ظرفیت 200مگابایت</p>
+      <p class="text-money">20,000,000تومان</p>
+    </div>
+
+    <div class="box-phone col-lg-3 col-md-3 col-sm-6 col-md-3 col-sm-3 border rounded-bottom">
+      <p style="color:red; font-weight: bold; display: block;">فروش ویژه</p>
+      <img src="https://dkstatics-public.digikala.com/digikala-products/71e8dbf638d9d2d62228b4609fdcbd8db395fabb_1697877125.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
+           alt="phon-img"
+           style="width:280px; height:280px;">
+      <p class="text-send">
+        <span class="material-symbols-outlined" style="color: red;">local_shipping</span>
+        <span>ارسال رایگان</span>
+      </p>
+      <p class="text-phone">گوشی موبایل اپل مدل 13پرو تک سیم کارت ظرفیت 200مگابایت</p>
+      <p class="text-money">20,000,000تومان</p>
+    </div>
+
+    <div class="box-phone col-lg-3 col-md-3 col-sm-6 col-md-3 col-sm-3 border rounded-bottom">
+    <p style="color:red; font-weight: bold; display: block;">فروش ویژه</p>
+      <img src="https://dkstatics-public.digikala.com/digikala-products/71e8dbf638d9d2d62228b4609fdcbd8db395fabb_1697877125.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
+           alt="phon-img"
+           style="width:280px; height:280px;">
+      <p class="text-send">
+        <span class="material-symbols-outlined" style="color: red;">local_shipping</span>
+        <span>ارسال رایگان</span>
+      </p>
+      <p class="text-phone">گوشی موبایل اپل مدل 13پرو تک سیم کارت ظرفیت 200مگابایت</p>
+      <p class="text-money">20,000,000تومان</p>
+    </div>
+
+    <div class="box-phone col-lg-3 col-md-3 col-sm-6 col-md-3 col-sm-3 border rounded-bottom">
+      <p style="color:red; font-weight: bold; display: block;">فروش ویژه</p>
+      <img src="https://dkstatics-public.digikala.com/digikala-products/71e8dbf638d9d2d62228b4609fdcbd8db395fabb_1697877125.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
+           alt="phon-img"
+           style="width:280px; height:280px;">
+      <p class="text-send">
+        <span class="material-symbols-outlined" style="color: red;">local_shipping</span>
+        <span>ارسال رایگان</span>
+      </p>
+      <p class="text-phone">گوشی موبایل اپل مدل 13پرو تک سیم کارت ظرفیت 200مگابایت</p>
+      <p class="text-money">20,000,000تومان</p>
+    </div>
+
+    <div class="box-phone col-lg-3 col-md-3 col-sm-6 col-md-3 col-sm-3 border rounded-bottom">
+      <p style="color:red; font-weight: bold; display: block;">فروش ویژه</p>
+      <img src="https://dkstatics-public.digikala.com/digikala-products/71e8dbf638d9d2d62228b4609fdcbd8db395fabb_1697877125.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
+           alt="phon-img"
+           style="width: 300px;height: 300px;">
+      <p class="text-send">
+        <span class="material-symbols-outlined">local_shipping</span>
+        <span>ارسال رایگان</span>
+      </p>
+      <p class="text-phone">گوشی موبایل اپل مدل 13پرو تک سیم کارت ظرفیت 200مگابایت</p>
+      <p class="text-money">20,000,000تومان</p>
+    </div>
+
+  </div>
+</section> -->
+
+
+
+
